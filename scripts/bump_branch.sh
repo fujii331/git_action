@@ -2,8 +2,7 @@
 
 set -ex
 
-git checkout "$BASE_BRANCH"
-git branch -D "$DEPLOY_BRANCH" && git checkout -b "$DEPLOY_BRANCH"
+git switch -c "$DEPLOY_BRANCH" "$BASE_BRANCH"
 git push origin "$DEPLOY_BRANCH" -f
 
 COMMIT_MESSAGE="stagingにデプロイ"
