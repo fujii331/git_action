@@ -14,7 +14,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TEST_ACTION }}
           OWNER: fujii331
           REPO: git_action
-          BASE_BRANCH: master
+          BASE_BRANCH: main
           DEPLOY_BRANCH: staging
         run: |
           ./scripts/set-github-action-committer.sh
