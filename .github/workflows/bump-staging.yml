@@ -16,4 +16,4 @@ jobs:
       - name: Push Staging Branch
         run: |
           git checkout -b staging
-          git push origin staging -f
+          git push origin staging
