@@ -9,14 +9,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Push Staging Branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.TEST_ACTION }}
-          OWNER: fujii331
-          REPO: git_action
-          BASE_BRANCH: main
-          DEPLOY_BRANCH: test1
+      - name: git setting
         run: |
-          ./scripts/set-github-action-committer.sh
-          git fetch --tags
-          ./scripts/bump_branch.sh
+          git config --local user.email "test@test.com"
+          git config --local user.name "testkun"
+      - name: Push Staging Branch
+        run: |
+          git branch -D staging && git checkout -b staging
+          git push origin staging -f
