@@ -15,7 +15,7 @@ jobs:
           OWNER: fujii331
           REPO: git_action
           BASE_BRANCH: main
-          DEPLOY_BRANCH: staging
+          DEPLOY_BRANCH: test1
         run: |
           ./scripts/set-github-action-committer.sh
           git fetch --tags
