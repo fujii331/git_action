@@ -2,7 +2,7 @@
 
 set -ex
 
-BRANCH_NAME = "bump_$DEPLOY_BRANCH"
+BRANCH_NAME="bump_$DEPLOY_BRANCH"
 git switch -c "$BRANCH_NAME" "$BASE_BRANCH"
 git push origin "$BRANCH_NAME"
 COMMIT_MESSAGE="patch-chore: Reflect $BASE_BRANCH branch change to $DEPLOY_BRANCH branch"
